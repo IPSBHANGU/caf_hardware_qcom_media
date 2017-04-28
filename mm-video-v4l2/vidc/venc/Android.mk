@@ -77,7 +77,6 @@ libmm-venc-inc      += frameworks/native/libs/nativewindow/include
 libmm-venc-inc      += frameworks/native/libs/arect/include
 libmm-venc-inc      += frameworks/native/libs/nativebase/include
 libmm-venc-inc      += $(call project-path-for,qcom-media)/libc2dcolorconvert
-libmm-venc-inc      += frameworks/av/include/media/stagefright
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 # Common Dependencies
@@ -98,8 +97,7 @@ LOCAL_C_INCLUDES                := $(libmm-venc-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(libmm-venc-add-dep)
 
 LOCAL_PRELINK_MODULE      := false
-LOCAL_SHARED_LIBRARIES    := liblog libutils libcutils \
-                             libc2dcolorconvert libdl libgui
+LOCAL_SHARED_LIBRARIES    := liblog libcutils libc2dcolorconvert libdl
 LOCAL_SHARED_LIBRARIES += libqdMetaData
 LOCAL_STATIC_LIBRARIES    := libOmxVidcCommon
 
@@ -128,8 +126,7 @@ LOCAL_C_INCLUDES                := $(libmm-venc-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(libmm-venc-add-dep)
 
 LOCAL_PRELINK_MODULE      := false
-LOCAL_SHARED_LIBRARIES    := liblog libutils libcutils \
-                             libc2dcolorconvert libdl libgui
+LOCAL_SHARED_LIBRARIES    := liblog libcutils libc2dcolorconvert libdl
 LOCAL_SHARED_LIBRARIES    += libMpeg4SwEncoder
 LOCAL_STATIC_LIBRARIES    := libOmxVidcCommon
 

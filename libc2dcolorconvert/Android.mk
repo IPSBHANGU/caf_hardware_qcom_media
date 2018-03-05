@@ -14,8 +14,11 @@ LOCAL_C_INCLUDES := \
 LOCAL_C_INCLUDES += $(call project-path-for,qcom-display)/libcopybit
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_HEADER_LIBRARIES	:= display_headers
-LOCAL_SHARED_LIBRARIES := liblog libdl libutils
+LOCAL_HEADER_LIBRARIES	:= display_headers \
+			libutils_headers \
+		        libhardware_headers
+
+LOCAL_SHARED_LIBRARIES := liblog libdl
 
 LOCAL_MODULE_TAGS := optional
 

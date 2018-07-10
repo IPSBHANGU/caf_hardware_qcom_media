@@ -64,6 +64,7 @@ libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/adreno
 libmm-vdec-inc          += $(TOP)/frameworks/native/include/media/openmax
 libmm-vdec-inc          += $(TOP)/frameworks/native/include/media/hardware
 libmm-vdec-inc          += $(TOP)/frameworks/native/libs/nativewindow/include
+libmm-vdec-inc          += $(call project-path-for,qcom-display)/libgralloc
 libmm-vdec-inc          += $(TOP)/frameworks/native/libs/arect/include
 libmm-vdec-inc          += $(TOP)/frameworks/native/libs/nativebase/include
 libmm-vdec-inc      	+= $(TOP)/$(call project-path-for,qcom-media)/libc2dcolorconvert
@@ -108,6 +109,7 @@ LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(libmm-vdec-add-dep)
 
 LOCAL_PRELINK_MODULE    := false
+LOCAL_HEADER_LIBRARIES	:= media_plugin_headers display_headers
 LOCAL_SHARED_LIBRARIES  := liblog libutils libui libcutils libdl
 
 LOCAL_SHARED_LIBRARIES  += libqdMetaData

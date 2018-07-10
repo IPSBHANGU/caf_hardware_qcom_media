@@ -28,11 +28,12 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef __DTSPARSER_H
 #define __DTSPARSER_H
 
+#include <pthread.h>
 #include "OMX_Core.h"
 #include "OMX_QCOMExtns.h"
 #include "qc_omx_component.h"
 
-#include<stdlib.h>
+#include <stdlib.h>
 
 #include <stdio.h>
 #include <inttypes.h>

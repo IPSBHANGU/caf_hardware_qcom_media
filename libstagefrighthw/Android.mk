@@ -37,7 +37,9 @@ LOCAL_C_INCLUDES:= \
 LOCAL_SHARED_LIBRARIES :=       \
         libutils                \
         libcutils               \
-        libdl                   \
+        libdl
+
+LOCAL_HEADER_LIBRARIES	:= media_plugin_headers
 
 LOCAL_MODULE := libstagefrighthw
 
